@@ -179,7 +179,7 @@ export function Documentation() {
             <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 mb-6">
               {Object.keys(validationDocs).map((key) => (
                 <TabsTrigger key={key} value={key}>
-                  {validationDocs[key].title}
+                  {validationDocs[key as keyof typeof validationDocs].title}
                 </TabsTrigger>
               ))}
             </TabsList>
