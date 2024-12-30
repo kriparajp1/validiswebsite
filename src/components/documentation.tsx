@@ -160,7 +160,7 @@ const result = isUpper('HELLO');
 }
 
 export function Documentation() {
-  const [activeTab, setActiveTab] = useState("basic")
+  // const [activeTab, setActiveTab] = useState("basic")
 
   return (
     <div className="py-12 sm:py-16 lg:py-24" id="docs">

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 const examples = {
@@ -20,7 +20,7 @@ const result2 = noSpaces('hello world'); // ❌ Invalid`,
 }
 
 export function CodeExamples() {
-  const [activeTab, setActiveTab] = useState("email")
+  // const [activeTab, setActiveTab] = useState("email")
 
   return (
     <div className="py-24 sm:py-32" id="docs">
