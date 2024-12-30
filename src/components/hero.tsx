@@ -17,6 +17,12 @@ export function Hero() {
             <div className="mt-6 flex items-center justify-center gap-4">
               <Badge variant="secondary">npm install validis</Badge>
             </div>
+            <div className="mt-6 flex items-center justify-center gap-4">
+              <Badge variant="secondary">or</Badge>
+            </div>
+            <div className="mt-6 flex items-center justify-center gap-4">
+              <Badge variant="secondary">yarn add validis</Badge>
+            </div>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               {/* <Button
                 onClick={() => {
