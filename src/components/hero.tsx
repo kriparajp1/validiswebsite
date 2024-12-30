@@ -9,7 +9,7 @@ export function Hero() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-              Simple Validation Package
+              <strong>Validis</strong>  <br/>Simple Validation Package
             </h1>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
               Your go-to solution for simple and customizable form validations. Zero dependencies, lightweight, and blazing fast.
