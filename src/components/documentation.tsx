@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+// import { useState } from "react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -175,7 +175,7 @@ export function Documentation() {
           </p>
         </div>
         <div className="mt-16">
-          <Tabs defaultValue="basic" className="w-full" onValueChange={setActiveTab}>
+          <Tabs defaultValue="basic" className="w-full" >
             <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 mb-6">
               {Object.keys(validationDocs).map((key) => (
                 <TabsTrigger key={key} value={key}>
