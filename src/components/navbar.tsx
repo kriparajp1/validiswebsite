@@ -30,7 +30,7 @@ export function Navbar() {
     <header className="fixed top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container flex h-14 items-center justify-between">
         <div className="flex items-center">
-          <Link href="/" className="mr-6 flex items-center space-x-2" style={{ marginLeft: '24px' }}>
+          <Link href="https://validis.netlify.app/" className="mr-6 flex items-center space-x-2" style={{ marginLeft: '24px' }}>
             <span className="font-bold">Validis</span>
           </Link>
           <div className="hidden md:flex md:items-center md:gap-6">
