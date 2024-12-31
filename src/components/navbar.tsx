@@ -28,13 +28,11 @@ export function Navbar() {
 
   return (
     <header className="fixed top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <nav className="container flex h-14 items-center">
-        <div className="mr-4 flex">
+      <nav className="container flex h-14 items-center justify-between">
+        <div className="flex items-center">
           <Link href="/" className="mr-6 flex items-center space-x-2" style={{ marginLeft: '24px' }}>
-            <span className="font-bold ">Validis</span>
+            <span className="font-bold">Validis</span>
           </Link>
-        </div>
-        <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
           <div className="hidden md:flex md:items-center md:gap-6">
             {navigation.map((item) => (
               <Popover key={item.name}>
@@ -81,44 +79,44 @@ export function Navbar() {
               </Popover>
             ))}
           </div>
-          <div className="flex items-center gap-2">
-            <Button 
-              onClick={() => scrollToSection('docs')} 
-              variant="outline" 
-              className="hidden md:flex"
-            >
-              Get Started
-            </Button>
-            <Button asChild variant="outline" className="hidden md:flex">
-              <Link href="https://github.com/kriparajp1/validis">
-                GitHub
-              </Link>
-            </Button>
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="md:hidden">
-                  <Menu className="h-5 w-5" />
-                  <span className="sr-only">Toggle navigation menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right">
-                <div className="grid gap-2 py-6">
-                  {navigation.map((item) => (
-                    <button
-                      key={item.name}
-                      onClick={() => {
-                        scrollToSection(item.href.slice(1));
-                        document.querySelector('[data-state="open"]')?.removeAttribute('data-state');
-                      }}
-                      className="block py-2 text-sm font-medium transition-colors hover:text-primary text-left"
-                    >
-                      {item.name}
-                    </button>
-                  ))}
-                </div>
-              </SheetContent>
-            </Sheet>
-          </div>
+        </div>
+        <div className="flex items-center gap-2">
+          <Button 
+            onClick={() => scrollToSection('docs')} 
+            variant="outline" 
+            className="hidden md:flex"
+          >
+            Get Started
+          </Button>
+          <Button asChild variant="outline" className="hidden md:flex">
+            <Link href="https://github.com/kriparajp1/validis">
+              GitHub
+            </Link>
+          </Button>
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="md:hidden">
+                <Menu className="h-5 w-5" />
+                <span className="sr-only">Toggle navigation menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right">
+              <div className="grid gap-2 py-6">
+                {navigation.map((item) => (
+                  <button
+                    key={item.name}
+                    onClick={() => {
+                      scrollToSection(item.href.slice(1));
+                      document.querySelector('[data-state="open"]')?.removeAttribute('data-state');
+                    }}
+                    className="block py-2 text-sm font-medium transition-colors hover:text-primary text-left"
+                  >
+                    {item.name}
+                  </button>
+                ))}
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </nav>
     </header>

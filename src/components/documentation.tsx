@@ -176,9 +176,9 @@ export function Documentation() {
         </div>
         <div className="mt-16">
           <Tabs defaultValue="basic" className="w-full" >
-            <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 mb-6">
+            <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 mb-6">
               {Object.keys(validationDocs).map((key) => (
-                <TabsTrigger key={key} value={key}>
+                <TabsTrigger key={key} value={key} className="px-2 py-1 text-xs sm:text-sm whitespace-nowrap overflow-hidden text-ellipsis">
                   {validationDocs[key as keyof typeof validationDocs].title}
                 </TabsTrigger>
               ))}
