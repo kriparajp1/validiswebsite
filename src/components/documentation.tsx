@@ -176,9 +176,13 @@ export function Documentation() {
         </div>
         <div className="mt-16">
           <Tabs defaultValue="basic" className="w-full" >
-            <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 mb-6">
+            <TabsList className="inline-flex h-auto flex-wrap justify-center rounded-lg bg-muted p-1 text-muted-foreground mb-6">
               {Object.keys(validationDocs).map((key) => (
-                <TabsTrigger key={key} value={key} className="px-2 py-1 text-xs sm:text-sm whitespace-nowrap overflow-hidden text-ellipsis">
+                <TabsTrigger
+                  key={key}
+                  value={key}
+                  className="inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
+                >
                   {validationDocs[key as keyof typeof validationDocs].title}
                 </TabsTrigger>
               ))}
