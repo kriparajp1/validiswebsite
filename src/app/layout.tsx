@@ -35,11 +35,11 @@ export default function RootLayout({
     <meta property="og:description" content="Simplify input validation with Validis, a lightweight, dependency-free library for JavaScript/Node.js. Perform email, phone, password, and advanced cross-field validations with ease." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://validis.netlify.app" />
-    <meta property="og:image" content="https://validis.netlify.app/og-image.png" />
+    <meta property="og:image" content="https://i.postimg.cc/x8JFDkGz/10.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Validis - Lightweight Validation Library" />
     <meta name="twitter:description" content="Validis is a powerful validation library offering flexibility and ease for JavaScript and Node.js developers. Handle email, phone, password, and other validations effortlessly." />
-    <meta name="twitter:image" content="https://validis.netlify.app/twitter-image.png" />
+    <meta name="twitter:image" content="https://i.postimg.cc/x8JFDkGz/10.jpg" />
 </head>
 
       <body
