@@ -97,7 +97,17 @@ const result = minLen('hello', 5);
 // Returns: { valid: true } or { valid: false, reason: "Input does not meet minimum length." }`,
         validExamples: ["password", "longEnough"],
         invalidExamples: ["short", "tiny"]
-      }
+      },
+      {
+        name: "match",
+        description: "Validates if two inputs match exactly.",
+        usage: `const { match } = require('validis');
+    const result = match('input1', 'input2');
+    // Returns: { valid: true } or { valid: false, reason: "Inputs do not match!" }`,
+        validExamples: ["password123", "password123"],
+        invalidExamples: ["password123", "passw"]
+    }
+    
     ]
   },
   number: {
