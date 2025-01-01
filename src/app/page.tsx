@@ -4,6 +4,7 @@ import { Documentation } from "@/components/documentation"
 import { RealWorldExamples } from "@/components/RealCaseExample"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { CodeImplementationExamples } from "@/components/code-implementation"
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Features />
         <Documentation />
         <RealWorldExamples />
+        <CodeImplementationExamples/>
       </main>
       <Footer />
     </div>
