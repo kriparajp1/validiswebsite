@@ -195,7 +195,7 @@ const HTMLcode=`<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Signup Form</title>
-  <script src="https://cdn.jsdelivr.net/npm/validis/dist/validis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/validis@1.0.10/index.min.js"></script>
   <style>
     .error { color: red; font-size: 0.9rem; }
   </style>
@@ -259,7 +259,7 @@ const HTMLcode=`<!DOCTYPE html>
 </body>
 </html>
 `
-const cdn=`<script src="https://cdn.jsdelivr.net/npm/validis/dist/validis.min.js"></script>
+const cdn=`<script src="https://cdn.jsdelivr.net/npm/validis@1.0.10/index.min.js"></script>
 `
 export function CodeImplementationExamples() {
   return (
