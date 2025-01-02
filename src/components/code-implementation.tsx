@@ -271,7 +271,7 @@ export function CodeImplementationExamples() {
             Validis in Action
           </p>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            See how to implement Validis in popular frontend frameworks and Normal HTML.
+            See how to implement Validis in popular frontend frameworks.
           </p>
         </div>
         <div className="mt-16">
