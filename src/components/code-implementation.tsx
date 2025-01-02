@@ -189,78 +189,78 @@ export class AppComponent {
   }
 }`
 
-const HTMLcode=`<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Signup Form</title>
-  <script src="https://cdn.jsdelivr.net/npm/validis@1.0.10/index.min.js"></script>
-  <style>
-    .error { color: red; font-size: 0.9rem; }
-  </style>
-</head>
-<body>
-  <h1>Signup Form</h1>
-  <form id="signupForm">
-    <div>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email">
-      <p class="error" id="emailError"></p>
-    </div>
-    <div>
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password">
-      <p class="error" id="passwordError"></p>
-    </div>
-    <div>
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username">
-      <p class="error" id="usernameError"></p>
-    </div>
-    <button type="submit">Signup</button>
-  </form>
+// const HTMLcode=`<!DOCTYPE html>
+// <html lang="en">
+// <head>
+//   <meta charset="UTF-8">
+//   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//   <title>Signup Form</title>
+//   <script src="https://cdn.jsdelivr.net/npm/validis@1.0.10/index.min.js"></script>
+//   <style>
+//     .error { color: red; font-size: 0.9rem; }
+//   </style>
+// </head>
+// <body>
+//   <h1>Signup Form</h1>
+//   <form id="signupForm">
+//     <div>
+//       <label for="email">Email:</label>
+//       <input type="email" id="email" name="email">
+//       <p class="error" id="emailError"></p>
+//     </div>
+//     <div>
+//       <label for="password">Password:</label>
+//       <input type="password" id="password" name="password">
+//       <p class="error" id="passwordError"></p>
+//     </div>
+//     <div>
+//       <label for="username">Username:</label>
+//       <input type="text" id="username" name="username">
+//       <p class="error" id="usernameError"></p>
+//     </div>
+//     <button type="submit">Signup</button>
+//   </form>
 
-  <script>
-    document.getElementById("signupForm").addEventListener("submit", function (e) {
-      e.preventDefault();
+//   <script>
+//     document.getElementById("signupForm").addEventListener("submit", function (e) {
+//       e.preventDefault();
 
-      const emailInput = document.getElementById("email").value;
-      const passwordInput = document.getElementById("password").value;
-      const usernameInput = document.getElementById("username").value;
+//       const emailInput = document.getElementById("email").value;
+//       const passwordInput = document.getElementById("password").value;
+//       const usernameInput = document.getElementById("username").value;
 
-      // Clear previous errors
-      document.getElementById("emailError").textContent = "";
-      document.getElementById("passwordError").textContent = "";
-      document.getElementById("usernameError").textContent = "";
+//       // Clear previous errors
+//       document.getElementById("emailError").textContent = "";
+//       document.getElementById("passwordError").textContent = "";
+//       document.getElementById("usernameError").textContent = "";
 
-      // Validate using Validis
-      const emailValidation = validis.email(emailInput);
-      const passwordValidation = validis.pass(passwordInput);
-      const usernameValidation = validis.noSpaces(usernameInput);
+//       // Validate using Validis
+//       const emailValidation = validis.email(emailInput);
+//       const passwordValidation = validis.pass(passwordInput);
+//       const usernameValidation = validis.noSpaces(usernameInput);
 
-      if (!emailValidation.valid) {
-        document.getElementById("emailError").textContent = emailValidation.reason;
-      }
-      if (!passwordValidation.valid) {
-        document.getElementById("passwordError").textContent =
-          passwordValidation.reasons ? passwordValidation.reasons.join(", ") : passwordValidation.reason;
-      }
-      if (!usernameValidation.valid) {
-        document.getElementById("usernameError").textContent = usernameValidation.reason;
-      }
+//       if (!emailValidation.valid) {
+//         document.getElementById("emailError").textContent = emailValidation.reason;
+//       }
+//       if (!passwordValidation.valid) {
+//         document.getElementById("passwordError").textContent =
+//           passwordValidation.reasons ? passwordValidation.reasons.join(", ") : passwordValidation.reason;
+//       }
+//       if (!usernameValidation.valid) {
+//         document.getElementById("usernameError").textContent = usernameValidation.reason;
+//       }
 
-      // If all validations pass
-      if (emailValidation.valid && passwordValidation.valid && usernameValidation.valid) {
-        alert("Form submitted successfully!");
-      }
-    });
-  </script>
-</body>
-</html>
-`
-const cdn=`<script src="https://cdn.jsdelivr.net/npm/validis@1.0.10/index.min.js"></script>
-`
+//       // If all validations pass
+//       if (emailValidation.valid && passwordValidation.valid && usernameValidation.valid) {
+//         alert("Form submitted successfully!");
+//       }
+//     });
+//   </script>
+// </body>
+// </html>
+// `
+// const cdn=`<script src="https://cdn.jsdelivr.net/npm/validis@1.0.10/index.min.js"></script>
+// `
 export function CodeImplementationExamples() {
   return (
     <div className="py-12 sm:py-16 lg:py-24" id="code-examples">
@@ -276,11 +276,11 @@ export function CodeImplementationExamples() {
         </div>
         <div className="mt-16">
           <Tabs defaultValue="react" className="w-full">
-            <TabsList className="grid w-full grid-cols-4">
+            <TabsList className="grid w-full grid-cols-3">
               <TabsTrigger value="react">React.js </TabsTrigger>
               <TabsTrigger value="vue">Vue.js</TabsTrigger>
               <TabsTrigger value="angular">Angular.js</TabsTrigger>
-              <TabsTrigger value="html">HTML</TabsTrigger>
+              {/* <TabsTrigger value="html">HTML</TabsTrigger> */}
             </TabsList>
             <TabsContent value="react">
               <Card>
@@ -321,7 +321,7 @@ export function CodeImplementationExamples() {
                 </CardContent>
               </Card>
             </TabsContent>
-            <TabsContent value="html">
+            {/* <TabsContent value="html">
               <Card>
                 <CardHeader>
                   <CardTitle> Implementation in HTML </CardTitle>
@@ -335,7 +335,7 @@ The Validis validation package is included via a CDN link:<CardContent>{cdn}</Ca
                   </pre>
                 </CardContent>
               </Card>
-            </TabsContent>
+            </TabsContent> */}
           </Tabs>
         </div>
       </div>
