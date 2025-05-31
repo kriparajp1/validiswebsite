@@ -5,6 +5,8 @@ import { RealWorldExamples } from "@/components/RealCaseExample"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { CodeImplementationExamples } from "@/components/code-implementation"
+import { SchemaAPI } from "@/components/schema-api"
+import { AvailableValidations } from "@/components/available-validations"
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
       <main>
         <Hero />
         <Features />
+        <SchemaAPI />
+        <AvailableValidations />
         <Documentation />
         <RealWorldExamples />
         <CodeImplementationExamples/>

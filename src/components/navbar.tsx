@@ -4,6 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 import { Menu } from 'lucide-react'
 import { Button } from "@/components/ui/button"
+import { ThemeToggle } from "@/components/ui/theme-toggle"
 import {
   Sheet,
   SheetContent,
@@ -81,6 +82,7 @@ export function Navbar() {
           </div>
         </div>
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <Button 
             onClick={() => scrollToSection('docs')} 
             variant="outline" 

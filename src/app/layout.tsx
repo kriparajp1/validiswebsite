@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ui/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,42 +24,37 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
-    <title>Validis - Lightweight Validation Library for Email, Phone, Password, and More</title>
-    <meta name="description" content="Validis is a lightweight, dependency-free JavaScript/Node.js validation library. It offers customizable validation for email, phone numbers, passwords, character limits, cross-field validations, and more. Perfect for modern web applications and developers seeking simplicity and flexibility." />
-    <meta name="keywords" content="Validis, validation library, JavaScript validation, Node.js validation, email validation, phone validation, password validation, lightweight validation, customizable validation, cross-field validation, input validation, data validation,npm install validis,npm,yarn" />
-    <meta name="author" content="Kriparaj P" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charSet="UTF-8" />
-    <meta property="og:title" content="Validis - Lightweight Validation Library" />
-    <meta property="og:description" content="Simplify input validation with Validis, a lightweight, dependency-free library for JavaScript/Node.js. Perform email, phone, password, and advanced cross-field validations with ease." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://validis.netlify.app" />
-    <meta property="og:image" content="https://i.postimg.cc/x8JFDkGz/10.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Validis - Lightweight Validation Library" />
-    <meta name="twitter:description" content="Validis is a powerful validation library offering flexibility and ease for JavaScript and Node.js developers. Handle email, phone, password, and other validations effortlessly." />
-    <meta name="twitter:image" content="https://i.postimg.cc/x8JFDkGz/10.jpg" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="Validis" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link rel="canonical" href="https://validis.netlify.app" />
-    <meta name="robots" content="index, follow" />
-    <meta name="rating" content="General" />
-    <meta name="distribution" content="global" />
-    <meta name="language" content="English" />
-    {/* <!-- Additional Metadata for SEO --> */}
-    <meta property="article:author" content="Kriparaj P" />
-    <meta property="article:section" content="Software Libraries" />
-    <meta property="article:tag" content="Validis, validation library, JavaScript validation, Node.js validation, email validation, phone validation, password validation, lightweight validation, customizable validation, cross-field validation, input validation, data validation ,npm validis,npm install validis,npm,yarn," />
-
-</head>
-
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+        <title>Validis - Comprehensive Validation Library for JavaScript</title>
+        <meta name="description" content="Validis is a powerful, dependency-free JavaScript/Node.js validation library. It offers customizable validation for email, phone numbers, passwords, character limits, cross-field validations, and more. Perfect for modern web applications and developers seeking simplicity and flexibility." />
+        <meta name="keywords" content="Validis, validation library, JavaScript validation, Node.js validation, email validation, phone validation, password validation, lightweight validation, customizable validation, cross-field validation, input validation, data validation,npm install validis,npm,yarn" />
+        <meta name="author" content="Kriparaj P" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charSet="UTF-8" />
+        <meta property="og:title" content="Validis - Comprehensive Validation Library" />
+        <meta property="og:description" content="Simplify input validation with Validis, a powerful, dependency-free library for JavaScript/Node.js. Perform email, phone, password, and advanced cross-field validations with ease." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://validis.netlify.app" />
+        <meta property="og:image" content="https://i.postimg.cc/x8JFDkGz/10.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Validis - Comprehensive Validation Library" />
+        <meta name="twitter:description" content="Validis is a powerful validation library offering flexibility and ease for JavaScript and Node.js developers. Handle email, phone, password, and other validations effortlessly." />
+        <meta name="twitter:image" content="https://i.postimg.cc/x8JFDkGz/10.jpg" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-title" content="Validis" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="canonical" href="https://validis.netlify.app" />
+        <meta name="robots" content="index, follow" />
+        <meta name="rating" content="General" />
+        <meta name="distribution" content="global" />
+        <meta name="language" content="English" />
+        <meta property="article:tag" content="Validis, validation library, JavaScript validation, Node.js validation, email validation, phone validation, password validation, lightweight validation, customizable validation, cross-field validation, input validation, data validation ,npm validis,npm install validis,npm,yarn," />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} font-sans`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
