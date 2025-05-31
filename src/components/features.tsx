@@ -1,4 +1,4 @@
-import { ArrowDownToLine, CheckCircle, Laptop, Zap, Shield, Settings, Code, Layers } from 'lucide-react'
+import {  CheckCircle, Laptop,  Shield, Settings, Code, Layers } from 'lucide-react'
 
 const features = [
   {
