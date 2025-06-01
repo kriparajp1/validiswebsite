@@ -3,6 +3,7 @@
 // import { useState } from "react"
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { CodeBlock } from "@/components/ui/code-block"
 
 const examples = {
   email: `const { email } = require('validis');
@@ -44,9 +45,9 @@ export function CodeExamples() {
             </TabsList>
             {Object.entries(examples).map(([key, code]) => (
               <TabsContent key={key} value={key}>
-                <pre className="mt-4 rounded-lg bg-muted p-4 overflow-x-auto">
-                  <code>{code}</code>
-                </pre>
+                <div className="mt-4 rounded-lg overflow-hidden">
+                  <CodeBlock code={code} language="javascript" />
+                </div>
               </TabsContent>
             ))}
           </Tabs>

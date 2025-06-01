@@ -2,6 +2,7 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { CodeBlock } from "@/components/ui/code-block"
 
 const schemaApiCode = `const { Schema } = require('validis');
 
@@ -142,9 +143,10 @@ export function SchemaAPI() {
                   <CardDescription>A chainable API for complex validations with type safety</CardDescription>
                 </CardHeader>
                 <CardContent className="p-0">
-                  <pre className="rounded-b-lg bg-muted/80 p-6 overflow-x-auto text-sm">
-                    <code>{schemaApiCode}</code>
-                  </pre>
+                  {/* Using the new CodeBlock component for syntax highlighting */}
+                  <div className="rounded-b-lg overflow-hidden">
+                    <CodeBlock code={schemaApiCode} language="javascript" />
+                  </div>
                 </CardContent>
               </Card>
             </TabsContent>
@@ -155,9 +157,10 @@ export function SchemaAPI() {
                   <CardDescription>Class-based implementations with chainable API for complex scenarios</CardDescription>
                 </CardHeader>
                 <CardContent className="p-0">
-                  <pre className="rounded-b-lg bg-muted/80 p-6 overflow-x-auto text-sm">
-                    <code>{schemaClassesCode}</code>
-                  </pre>
+                  {/* Using the new CodeBlock component for syntax highlighting */}
+                  <div className="rounded-b-lg overflow-hidden">
+                    <CodeBlock code={schemaClassesCode} language="javascript" />
+                  </div>
                 </CardContent>
               </Card>
             </TabsContent>
@@ -168,9 +171,10 @@ export function SchemaAPI() {
                   <CardDescription>Understanding validation results and error handling</CardDescription>
                 </CardHeader>
                 <CardContent className="p-0">
-                  <pre className="rounded-b-lg bg-muted/80 p-6 overflow-x-auto text-sm">
-                    <code>{returnValuesCode}</code>
-                  </pre>
+                  {/* Using the new CodeBlock component for syntax highlighting */}
+                  <div className="rounded-b-lg overflow-hidden">
+                    <CodeBlock code={returnValuesCode} language="javascript" />
+                  </div>
                 </CardContent>
               </Card>
             </TabsContent>

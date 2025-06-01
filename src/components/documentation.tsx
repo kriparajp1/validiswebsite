@@ -5,6 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, XCircle } from 'lucide-react'
+import { CodeBlock } from "@/components/ui/code-block"
 
 const validationDocs = {
   basic: {
@@ -184,10 +185,11 @@ export function Documentation() {
         <div className="mx-auto max-w-2xl lg:text-center">
           <Badge variant="info" className="mb-4 px-4 py-1">Documentation</Badge>
           <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
-            Comprehensive Validation Guide
+            Comprehensive Validation Library
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Learn how to use Validis validation functions with detailed examples and use cases.
+            Explore Validis&apos;s extensive validation functions with detailed examples, use cases, and return values. 
+            Our library supports Schema-based API, Legacy Function API, and Validation Schema Classes for all your validation needs.
           </p>
         </div>
         <div className="mt-16">
@@ -217,9 +219,9 @@ export function Documentation() {
                         <p className="text-muted-foreground mb-4">{func.description}</p>
                         <div className="mb-4">
                           <h4 className="text-sm font-semibold mb-2">Usage</h4>
-                          <pre className="rounded-lg bg-muted/80 p-4 overflow-x-auto text-sm border border-border/50 shadow-inner">
-                            <code>{func.usage}</code>
-                          </pre>
+                          <div className="rounded-lg overflow-hidden border border-border/50 shadow-inner">
+                            <CodeBlock code={func.usage} language="javascript" />
+                          </div>
                         </div>
                         <div className="grid gap-6 sm:grid-cols-2">
                           <div>
